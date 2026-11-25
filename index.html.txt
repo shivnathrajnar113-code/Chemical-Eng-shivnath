@@ -1,0 +1,2211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Shivnath Sambhaji Rajnar — Chemical Engineer & Process Design Enthusiast (Class of 2026). Specializing in carbon capture systems, process simulation, and production yield optimization." />
+  <title>Shivnath Sambhaji Rajnar | Chemical Engineer & Process Design Enthusiast</title>
+
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       1. DESIGN TOKENS & BASE RESET
+       ========================================================================== */
+    :root {
+      --bg-white: #FFFFFF;
+      --bg-slate: #F8FAFC;
+      --bg-card: #FFFFFF;
+      --navy-900: #0F172A;
+      --navy-800: #1E293B;
+      --teal-600: #0D9488;
+      --teal-700: #0F766E;
+      --teal-500: #14B8A6;
+      --teal-50: #F0FDFA;
+      --teal-100: #CCFBF1;
+      --text-main: #1E293B;
+      --text-muted: #64748B;
+      --border-light: #E2E8F0;
+      --border-subtle: rgba(15, 23, 42, 0.08);
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05), 0 1px 2px rgba(15, 23, 42, 0.04);
+      --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.07), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+      --shadow-lg: 0 20px 40px -12px rgba(15, 23, 42, 0.12);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-heading: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --nav-height: 76px;
+      --transition: 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--nav-height);
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--text-main);
+      background-color: var(--bg-white);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-heading);
+      color: var(--navy-900);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: 96px 0;
+      position: relative;
+    }
+
+    .section-alt {
+      background-color: var(--bg-slate);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .section-header {
+      margin-bottom: 52px;
+      max-width: 680px;
+    }
+
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--teal-600);
+      margin-bottom: 12px;
+    }
+
+    .section-eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 2px;
+      background-color: var(--teal-600);
+      border-radius: 2px;
+    }
+
+    .section-title {
+      font-size: clamp(1.85rem, 3.2vw, 2.5rem);
+      font-weight: 800;
+      color: var(--navy-900);
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      font-size: 1.0625rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       2. BUTTONS
+       ========================================================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 24px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.9375rem;
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
+    .btn-primary {
+      background-color: var(--navy-900);
+      color: var(--bg-white);
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.18);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--teal-600);
+      box-shadow: 0 8px 22px rgba(13, 148, 136, 0.28);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background-color: var(--bg-white);
+      color: var(--navy-900);
+      border: 1.5px solid var(--border-light);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--teal-600);
+      color: var(--teal-600);
+      background-color: var(--teal-50);
+      transform: translateY(-2px);
+    }
+
+    .btn-teal {
+      background-color: var(--teal-600);
+      color: var(--bg-white);
+      box-shadow: 0 4px 14px rgba(13, 148, 136, 0.24);
+    }
+
+    .btn-teal:hover {
+      background-color: var(--teal-700);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       3. STICKY GLASSMORPHISM NAVBAR
+       ========================================================================== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--nav-height);
+      background: rgba(255, 255, 255, 0.86);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-subtle);
+      transition: box-shadow var(--transition), background var(--transition);
+    }
+
+    .navbar.scrolled {
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+    }
+
+    .nav-container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .nav-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.375rem;
+      color: var(--navy-900);
+      letter-spacing: -0.03em;
+    }
+
+    .nav-logo-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, var(--navy-900), var(--navy-800));
+      color: var(--bg-white);
+      font-size: 0.9375rem;
+      letter-spacing: -0.02em;
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.15);
+    }
+
+    .nav-logo-dot {
+      color: var(--teal-600);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-link {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      position: relative;
+      padding: 6px 0;
+      transition: color var(--transition);
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--teal-600);
+      border-radius: 2px;
+      transition: width var(--transition);
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--navy-900);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    .nav-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-light);
+      align-items: center;
+      justify-content: center;
+      color: var(--navy-900);
+      transition: background var(--transition), border-color var(--transition);
+    }
+
+    .nav-toggle:hover {
+      background-color: var(--bg-slate);
+      border-color: var(--teal-600);
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: var(--nav-height);
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-light);
+      padding: 20px 24px 28px;
+      box-shadow: var(--shadow-lg);
+      z-index: 99;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .mobile-menu.open {
+      display: flex;
+      animation: slideDown 0.24s ease-out;
+    }
+
+    .mobile-nav-link {
+      display: block;
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      color: var(--navy-800);
+      transition: background var(--transition), color var(--transition);
+    }
+
+    .mobile-nav-link:hover {
+      background-color: var(--teal-50);
+      color: var(--teal-600);
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ==========================================================================
+       4. HERO SECTION (INDUSTRIAL BLUEPRINT GRID)
+       ========================================================================== */
+    .hero {
+      position: relative;
+      padding: 88px 0 96px;
+      overflow: hidden;
+      background-color: var(--bg-white);
+      /* Subtle CAD / Blueprint Grid */
+      background-image:
+        linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+        linear-gradient(to right, rgba(13, 148, 136, 0.045) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(13, 148, 136, 0.045) 1px, transparent 1px);
+      background-size: 32px 32px, 32px 32px, 160px 160px, 160px 160px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 82% 22%, rgba(20, 184, 166, 0.11) 0%, transparent 45%),
+        radial-gradient(circle at 12% 85%, rgba(15, 23, 42, 0.04) 0%, transparent 45%),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.85));
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background-color: var(--teal-50);
+      border: 1px solid var(--teal-100);
+      color: var(--teal-700);
+      font-size: 0.84375rem;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--teal-600);
+      box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.18);
+    }
+
+    .hero-name {
+      font-size: clamp(2.35rem, 4.8vw, 3.65rem);
+      font-weight: 800;
+      color: var(--navy-900);
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+
+    .hero-role {
+      font-family: var(--font-heading);
+      font-size: clamp(1.15rem, 2vw, 1.45rem);
+      font-weight: 700;
+      color: var(--teal-600);
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-description {
+      font-size: 1.09375rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin-bottom: 34px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    /* Engineering Schematic Visual Card */
+    .hero-schematic {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+    }
+
+    .schematic-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+      border-bottom: 1px dashed var(--border-light);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+    }
+
+    .schematic-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--teal-600);
+    }
+
+    .schematic-status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: var(--teal-500);
+    }
+
+    .schematic-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .schematic-footer {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border-light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* ==========================================================================
+       5. ABOUT SECTION
+       ========================================================================== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .about-text {
+      font-size: 1.09375rem;
+      color: var(--text-main);
+      line-height: 1.8;
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-left: 4px solid var(--teal-600);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .highlights-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .highlight-badge-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 22px;
+      background-color: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+    }
+
+    .highlight-badge-card:hover {
+      transform: translateX(6px);
+      border-color: var(--teal-500);
+      box-shadow: var(--shadow-md);
+    }
+
+    .highlight-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 10px;
+      background-color: var(--teal-50);
+      color: var(--teal-600);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 1px solid var(--teal-100);
+    }
+
+    .highlight-title {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy-900);
+    }
+
+    /* ==========================================================================
+       6. TECHNICAL SKILLS SECTION
+       ========================================================================== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .skill-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 30px 26px;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skill-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--navy-900), var(--teal-600));
+      opacity: 0.85;
+      transition: opacity var(--transition);
+    }
+
+    .skill-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(13, 148, 136, 0.35);
+    }
+
+    .skill-card-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+      background-color: var(--navy-900);
+      color: var(--bg-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 14px rgba(15, 23, 42, 0.14);
+    }
+
+    .skill-card-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--navy-900);
+      margin-bottom: 18px;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .skill-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      font-size: 0.95rem;
+      color: var(--text-main);
+      font-weight: 500;
+      padding: 10px 12px;
+      background-color: var(--bg-slate);
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      transition: background-color var(--transition), border-color var(--transition);
+    }
+
+    .skill-card:hover .skill-item {
+      background-color: var(--bg-white);
+      border-color: var(--border-light);
+    }
+
+    .skill-check {
+      color: var(--teal-600);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ==========================================================================
+       7. KEY ENGINEERING PROJECTS SECTION
+       ========================================================================== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .project-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 34px 32px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: rgba(13, 148, 136, 0.4);
+    }
+
+    .project-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 22px;
+    }
+
+    .project-index {
+      font-family: var(--font-heading);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--teal-700);
+      background-color: var(--teal-50);
+      border: 1px solid var(--teal-100);
+      padding: 6px 12px;
+      border-radius: 999px;
+    }
+
+    .project-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background-color: var(--bg-slate);
+      border: 1px solid var(--border-light);
+      color: var(--navy-900);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .project-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--navy-900);
+      margin-bottom: 14px;
+    }
+
+    .project-description {
+      font-size: 0.985rem;
+      color: var(--text-muted);
+      line-height: 1.72;
+      margin-bottom: 26px;
+    }
+
+    .project-tools-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--navy-800);
+      margin-bottom: 10px;
+    }
+
+    .project-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    .tool-tag {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--navy-800);
+      background-color: var(--bg-slate);
+      border: 1px solid var(--border-light);
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background-color var(--transition), color var(--transition), border-color var(--transition);
+    }
+
+    .project-card:hover .tool-tag {
+      border-color: rgba(13, 148, 136, 0.25);
+    }
+
+    /* ==========================================================================
+       8. EDUCATION & CREDENTIALS SECTION
+       ========================================================================== */
+    .credentials-timeline {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .credential-card {
+      background-color: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    }
+
+    .credential-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(13, 148, 136, 0.35);
+    }
+
+    .credential-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .credential-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background-color: var(--teal-50);
+      border: 1px solid var(--teal-100);
+      color: var(--teal-600);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .credential-year {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--teal-700);
+      margin-bottom: 4px;
+    }
+
+    .credential-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy-900);
+    }
+
+    .credential-body {
+      color: var(--text-muted);
+      font-size: 0.96875rem;
+      line-height: 1.7;
+    }
+
+    .credential-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .credential-tag {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--navy-800);
+      background-color: var(--bg-slate);
+      border: 1px solid var(--border-light);
+      padding: 5px 11px;
+      border-radius: 6px;
+    }
+
+    /* ==========================================================================
+       9. CONTACT SECTION & FOOTER
+       ========================================================================== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    .contact-info-card {
+      background: linear-gradient(155deg, var(--navy-900) 0%, var(--navy-800) 100%);
+      color: var(--bg-white);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-info-card::after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      bottom: -40px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(20, 184, 166, 0.25), transparent 70%);
+      pointer-events: none;
+    }
+
+    .contact-info-title {
+      color: var(--bg-white);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .contact-info-subtitle {
+      color: #CBD5E1;
+      font-size: 0.95rem;
+      margin-bottom: 28px;
+      line-height: 1.65;
+    }
+
+    .contact-method {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      margin-bottom: 16px;
+    }
+
+    .contact-method-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--teal-500);
+      margin-bottom: 8px;
+    }
+
+    .email-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .email-link {
+      font-weight: 600;
+      font-size: 0.98rem;
+      color: var(--bg-white);
+      word-break: break-all;
+      transition: color var(--transition);
+    }
+
+    .email-link:hover {
+      color: var(--teal-500);
+    }
+
+    .copy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 12px;
+      border-radius: 6px;
+      background-color: rgba(20, 184, 166, 0.18);
+      border: 1px solid rgba(20, 184, 166, 0.35);
+      color: #CCFBF1;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      transition: all var(--transition);
+    }
+
+    .copy-btn:hover {
+      background-color: var(--teal-600);
+      color: var(--bg-white);
+    }
+
+    .linkedin-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 14px 20px;
+      border-radius: var(--radius-sm);
+      background-color: var(--teal-600);
+      color: var(--bg-white);
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-top: 8px;
+      transition: background-color var(--transition), transform var(--transition);
+    }
+
+    .linkedin-btn:hover {
+      background-color: var(--teal-500);
+      transform: translateY(-2px);
+    }
+
+    .contact-form-card {
+      background-color: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .form-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--navy-800);
+      margin-bottom: 7px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--text-main);
+      background-color: var(--bg-slate);
+      transition: border-color var(--transition), background-color var(--transition), box-shadow var(--transition);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--teal-600);
+      background-color: var(--bg-white);
+      box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.14);
+    }
+
+    textarea.form-control {
+      min-height: 118px;
+      resize: vertical;
+    }
+
+    .footer {
+      background-color: var(--navy-900);
+      color: #94A3B8;
+      padding: 30px 0;
+      text-align: center;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* ==========================================================================
+       10. RESUME MODAL & TOAST NOTIFICATION
+       ========================================================================== */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(6px);
+      z-index: 200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+      animation: fadeIn 0.2s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .modal-dialog {
+      background: var(--bg-white);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 780px;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.35);
+      overflow: hidden;
+    }
+
+    .modal-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 24px;
+      background-color: var(--bg-slate);
+      border-bottom: 1px solid var(--border-light);
+      gap: 12px;
+    }
+
+    .modal-toolbar-title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--navy-900);
+    }
+
+    .modal-toolbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .modal-close-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      border: 1px solid var(--border-light);
+      background: var(--bg-white);
+      transition: all var(--transition);
+    }
+
+    .modal-close-btn:hover {
+      color: var(--navy-900);
+      border-color: var(--navy-900);
+    }
+
+    .modal-body {
+      padding: 32px;
+      overflow-y: auto;
+    }
+
+    /* Printable Resume Layout */
+    .resume-sheet {
+      color: var(--navy-900);
+      font-size: 0.9375rem;
+      line-height: 1.55;
+    }
+
+    .resume-header {
+      border-bottom: 2px solid var(--navy-900);
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+    }
+
+    .resume-name {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--navy-900);
+      margin-bottom: 4px;
+    }
+
+    .resume-tagline {
+      color: var(--teal-700);
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .resume-contact-line {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .resume-section {
+      margin-bottom: 20px;
+    }
+
+    .resume-section-title {
+      font-size: 0.875rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--navy-900);
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+
+    .resume-item {
+      margin-bottom: 12px;
+    }
+
+    .resume-item-title {
+      font-weight: 700;
+      color: var(--navy-900);
+    }
+
+    .resume-item-meta {
+      font-size: 0.85rem;
+      color: var(--teal-700);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .resume-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px 20px;
+      font-size: 0.9rem;
+    }
+
+    .resume-list li::before {
+      content: "• ";
+      color: var(--teal-600);
+      font-weight: 700;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 300;
+      background-color: var(--navy-900);
+      color: var(--bg-white);
+      padding: 14px 20px;
+      border-radius: var(--radius-sm);
+      border-left: 4px solid var(--teal-500);
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.925rem;
+      font-weight: 500;
+      transform: translateY(120%);
+      opacity: 0;
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease;
+      pointer-events: none;
+      max-width: calc(100vw - 48px);
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .toast-icon {
+      color: var(--teal-500);
+      flex-shrink: 0;
+    }
+
+    /* ==========================================================================
+       11. SCROLL REVEAL ANIMATIONS
+       ========================================================================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* ==========================================================================
+       12. RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 992px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 64px 0 72px;
+      }
+
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      .section {
+        padding: 72px 0;
+      }
+
+      .skills-grid,
+      .projects-grid,
+      .credentials-timeline,
+      .resume-list {
+        grid-template-columns: 1fr;
+      }
+
+      .modal-body {
+        padding: 22px;
+      }
+
+      .project-card,
+      .contact-info-card,
+      .contact-form-card {
+        padding: 26px 22px;
+      }
+    }
+
+    /* ==========================================================================
+       13. PRINT STYLESHEET (FOR PRINT-TO-PDF RESUME)
+       ========================================================================== */
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+
+      #resume-modal,
+      #resume-modal .modal-dialog,
+      #resume-modal .modal-body,
+      #resume-printable,
+      #resume-printable * {
+        visibility: visible;
+      }
+
+      #resume-modal {
+        position: absolute;
+        inset: 0;
+        background: #FFFFFF !important;
+        padding: 0 !important;
+        display: block !important;
+      }
+
+      #resume-modal .modal-dialog {
+        box-shadow: none !important;
+        max-width: 100% !important;
+        max-height: none !important;
+        border-radius: 0 !important;
+      }
+
+      #resume-modal .modal-toolbar {
+        display: none !important;
+      }
+
+      #resume-modal .modal-body {
+        padding: 0 !important;
+        overflow: visible !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       STICKY GLASSMORPHISM NAVIGATION BAR
+       ======================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#top" class="nav-logo" aria-label="Shivnath Sambhaji Rajnar Home">
+        <span class="nav-logo-mark">SSR</span>
+        <span>Shivnath Rajnar<span class="nav-logo-dot">.</span></span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#education" class="nav-link">Education &amp; Credentials</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <button
+        type="button"
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile Navigation">
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#skills" class="mobile-nav-link">Skills</a>
+    <a href="#projects" class="mobile-nav-link">Projects</a>
+    <a href="#education" class="mobile-nav-link">Education &amp; Credentials</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+  </div>
+
+  <main id="top">
+    <!-- ======================================================================
+         HERO SECTION
+         ====================================================================== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="hero-badge-dot" aria-hidden="true"></span>
+            <span>B.E. / B.Tech Chemical Engineering &bull; Class of 2026</span>
+          </div>
+
+          <h1 class="hero-name">Shivnath Sambhaji Rajnar</h1>
+          <p class="hero-role">Chemical Engineer | Process Design Enthusiast</p>
+          <p class="hero-description">
+            Specializing in sustainable process engineering, carbon capture system design, and data-driven production yield optimization.
+          </p>
+
+          <div class="hero-actions">
+            <button type="button" class="btn btn-primary" id="open-resume-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download Resume</span>
+            </button>
+
+            <a href="#contact" class="btn btn-secondary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>Contact Me</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Clean Process Engineering PFD Schematic Card -->
+        <aside class="hero-schematic" aria-label="Process Flow Schematic Illustration">
+          <div class="schematic-header">
+            <span>Process System Schematic</span>
+            <span class="schematic-status">
+              <span class="schematic-status-dot" aria-hidden="true"></span>
+              PFD &amp; Mass Balance
+            </span>
+          </div>
+
+          <svg class="schematic-svg" viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Absorption Tower Process Flow Diagram">
+            <!-- Subtle Grid Nodes -->
+            <rect x="10" y="10" width="380" height="230" rx="10" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+
+            <!-- Feed Stream In (Flue Gas) -->
+            <path d="M35 185 H145" stroke="#0F172A" stroke-width="2.2" stroke-linecap="round" />
+            <polygon points="145,180 155,185 145,190" fill="#0F172A" />
+            <text x="35" y="175" fill="#64748B" font-family="Inter, sans-serif" font-size="10" font-weight="600">FLUE GAS IN</text>
+
+            <!-- Solvent Lean In (Top) -->
+            <path d="M295 55 H240 V70" stroke="#0D9488" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+            <polygon points="235,66 240,76 245,66" fill="#0D9488" />
+            <text x="255" y="45" fill="#0F766E" font-family="Inter, sans-serif" font-size="10" font-weight="600">LEAN SOLVENT</text>
+
+            <!-- Absorption Column Vessel -->
+            <rect x="160" y="45" width="80" height="165" rx="34" fill="#FFFFFF" stroke="#0F172A" stroke-width="2.5" />
+            <!-- Packed Bed Sections -->
+            <rect x="170" y="85" width="60" height="36" rx="4" fill="#F0FDFA" stroke="#0D9488" stroke-width="1.5" />
+            <line x1="170" y1="85" x2="230" y2="121" stroke="#14B8A6" stroke-width="1" stroke-dasharray="3 2" />
+            <line x1="230" y1="85" x2="170" y2="121" stroke="#14B8A6" stroke-width="1" stroke-dasharray="3 2" />
+
+            <rect x="170" y="135" width="60" height="36" rx="4" fill="#F0FDFA" stroke="#0D9488" stroke-width="1.5" />
+            <line x1="170" y1="135" x2="230" y2="171" stroke="#14B8A6" stroke-width="1" stroke-dasharray="3 2" />
+            <line x1="230" y1="135" x2="170" y2="171" stroke="#14B8A6" stroke-width="1" stroke-dasharray="3 2" />
+
+            <!-- Overhead Treated Gas -->
+            <path d="M200 45 V24 H325" stroke="#0D9488" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+            <polygon points="325,19 335,24 325,29" fill="#0D9488" />
+            <text x="250" y="19" fill="#0F766E" font-family="Inter, sans-serif" font-size="10" font-weight="600">TREATED GAS</text>
+
+            <!-- Bottom Rich Solvent Out -->
+            <path d="M200 210 V225 H325" stroke="#0F172A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+            <polygon points="325,220 335,225 325,230" fill="#0F172A" />
+            <text x="250" y="218" fill="#64748B" font-family="Inter, sans-serif" font-size="10" font-weight="600">RICH SOLVENT</text>
+
+            <!-- Control Valve / Instrumentation Symbols -->
+            <circle cx="95" cy="185" r="8" fill="#FFFFFF" stroke="#0D9488" stroke-width="1.8" />
+            <text x="95" y="188" text-anchor="middle" fill="#0F172A" font-family="Inter, sans-serif" font-size="7" font-weight="700">FT</text>
+
+            <circle cx="285" cy="24" r="8" fill="#FFFFFF" stroke="#0D9488" stroke-width="1.8" />
+            <text x="285" y="27" text-anchor="middle" fill="#0F172A" font-family="Inter, sans-serif" font-size="7" font-weight="700">AT</text>
+
+            <circle cx="115" cy="115" r="24" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" />
+            <text x="115" y="112" text-anchor="middle" fill="#0F172A" font-family="Inter, sans-serif" font-size="9" font-weight="700">T-101</text>
+            <text x="115" y="124" text-anchor="middle" fill="#0D9488" font-family="Inter, sans-serif" font-size="8" font-weight="600">CO₂ ABS</text>
+          </svg>
+
+          <div class="schematic-footer">
+            <span>Unit Op: Gas-Liquid Mass Transfer</span>
+            <span>Aspen Plus &bull; AutoCAD P&amp;ID</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         ABOUT ME SECTION
+         ====================================================================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">About Me</span>
+          <h2 class="section-title">Engineering Sustainable, High-Yield Processes</h2>
+          <p class="section-subtitle">Bridging chemical engineering fundamentals with modern process simulation and industrial modeling.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I am a dedicated Chemical Engineering graduate (Class of 2026) with a strong passion for process design, sustainable energy solutions, and industrial plant optimization. My expertise lies in designing efficient separation systems and utilizing data analysis tools to maximize production yields. I am eager to apply fundamental chemical engineering principles and modern simulation tools to solve real-world industrial challenges.
+            </p>
+          </div>
+
+          <div class="highlights-stack reveal">
+            <div class="highlight-badge-card">
+              <div class="highlight-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 3h6"></path>
+                  <path d="M10 3v6l-4.5 8.5A2 2 0 0 0 7.25 20h9.5a2 2 0 0 0 1.75-2.5L14 9V3"></path>
+                  <path d="M8.5 14h7"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="highlight-title">Process Design &amp; Simulation</h3>
+              </div>
+            </div>
+
+            <div class="highlight-badge-card">
+              <div class="highlight-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22c5.523 0 10-4.477 10-10a10 10 0 0 0-5.5-8.94"></path>
+                  <path d="M2 12c0 5.523 4.477 10 10 10"></path>
+                  <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                  <path d="M12 2v8"></path>
+                  <path d="M9 5l3-3 3 3"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="highlight-title">Carbon Capture Technology</h3>
+              </div>
+            </div>
+
+            <div class="highlight-badge-card">
+              <div class="highlight-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+              </div>
+              <div>
+                <h3 class="highlight-title">Mass &amp; Energy Balance</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         TECHNICAL SKILLS SECTION
+         ====================================================================== -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Technical Capabilities</span>
+          <h2 class="section-title">Engineering Toolkit &amp; Competencies</h2>
+          <p class="section-subtitle">Software, drafting standards, and analytical frameworks applied across process design and plant optimization.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category 1: Process Simulation -->
+          <article class="skill-card reveal">
+            <div class="skill-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Process Simulation</h3>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <svg class="skill-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Aspen Plus</span>
+              </li>
+              <li class="skill-item">
+                <svg class="skill-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Aspen HYSYS</span>
+              </li>
+              <li class="skill-item">
+                <svg class="skill-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Process Flow Diagram (PFD) Development</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Category 2: Design & CAD -->
+          <article class="skill-card reveal">
+            <div class="skill-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12h20"></path>
+                <path d="M12 2v20"></path>
+                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Design &amp; CAD</h3>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <svg class="skill-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>AutoCAD (2D/3D)</span>
+              </li>
+              <li class="skill-item">
+                <svg class="skill-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>P&amp;ID (Piping &amp; Instrumentation Diagrams)</span>
+              </li>
+              <li class="skill-item">
+                <svg class="skill-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Equipment Sizing (Absorption Towers)</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Category 3: Data Analysis & Optimization -->
+          <article class="skill-card reveal">
+            <div class="skill-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="skill-card-title">Data Analysis &amp; Optimization</h3>
+            <ul class="skill-list">
+              <li class="skill-item">
+                <svg class="skill-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>MATLAB</span>
+              </li>
+              <li class="skill-item">
+                <svg class="skill-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Microsoft Excel (Advanced Modeling &amp; Yield Balance)</span>
+              </li>
+              <li class="skill-item">
+                <svg class="skill-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Mass &amp; Energy Balance Calculations</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         KEY ENGINEERING PROJECTS SECTION
+         ====================================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Engineering Portfolio</span>
+          <h2 class="section-title">Key Engineering Projects</h2>
+          <p class="section-subtitle">Applied process design, equipment sizing, and quantitative yield optimization initiatives.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card reveal">
+            <div>
+              <div class="project-top">
+                <span class="project-index">Project 01</span>
+                <div class="project-icon-box" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="7" y="2" width="10" height="20" rx="5"></rect>
+                    <line x1="7" y1="9" x2="17" y2="9"></line>
+                    <line x1="7" y1="15" x2="17" y2="15"></line>
+                    <path d="M2 18h5"></path>
+                    <path d="M17 6h5"></path>
+                  </svg>
+                </div>
+              </div>
+
+              <h3 class="project-title">Carbon Capture Absorption Tower Design</h3>
+              <p class="project-description">
+                Engineered the conceptual and detailed process design of an industrial absorption tower aimed at capturing CO<sub>2</sub> emissions from flue gas streams. Performed rigorous mass transfer, column sizing, packing selection, and gas-liquid equilibrium calculations to optimize capture efficiency and minimize energy penalties.
+              </p>
+            </div>
+
+            <div>
+              <div class="project-tools-label">Tools Used</div>
+              <div class="project-tools">
+                <span class="tool-tag">Process Design Principles</span>
+                <span class="tool-tag">Chemical Engineering Thermodynamics</span>
+                <span class="tool-tag">Mass Transfer Calculations</span>
+                <span class="tool-tag">AutoCAD / P&amp;ID</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card reveal">
+            <div>
+              <div class="project-top">
+                <span class="project-index">Project 02</span>
+                <div class="project-icon-box" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                    <path d="M3 9h18"></path>
+                    <path d="M9 21V9"></path>
+                  </svg>
+                </div>
+              </div>
+
+              <h3 class="project-title">Industrial Production Yield Balance &amp; Optimization</h3>
+              <p class="project-description">
+                Developed a comprehensive, automated Excel-based material and yield balance model to track raw material conversion, by-product formation, and process losses across unit operations. Identified key bottlenecks and proposed mass-balance adjustments to improve overall plant production yield and operational efficiency.
+              </p>
+            </div>
+
+            <div>
+              <div class="project-tools-label">Tools Used</div>
+              <div class="project-tools">
+                <span class="tool-tag">Microsoft Excel</span>
+                <span class="tool-tag">Mass &amp; Energy Balance</span>
+                <span class="tool-tag">Process Data Analysis</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         EDUCATION & CERTIFICATIONS SECTION
+         ====================================================================== -->
+    <section class="section section-alt" id="education">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Academic &amp; Technical Background</span>
+          <h2 class="section-title">Education &amp; Credentials</h2>
+          <p class="section-subtitle">Formal chemical engineering curriculum combined with specialized simulation and modeling workshops.</p>
+        </div>
+
+        <div class="credentials-timeline">
+          <!-- Degree Card -->
+          <article class="credential-card reveal">
+            <div class="credential-header">
+              <div class="credential-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+              <div>
+                <span class="credential-year">Graduating Year: 2026</span>
+                <h3 class="credential-title">Bachelor of Chemical Engineering</h3>
+              </div>
+            </div>
+            <p class="credential-body">
+              Comprehensive undergraduate engineering foundation focused on industrial process design, separation phenomena, reaction kinetics, and safe plant operations.
+            </p>
+            <div class="credential-tags">
+              <span class="credential-tag">Process Design</span>
+              <span class="credential-tag">Mass Transfer</span>
+              <span class="credential-tag">Chemical Reaction Engineering</span>
+              <span class="credential-tag">Plant Safety</span>
+            </div>
+          </article>
+
+          <!-- Workshops & Competencies Card -->
+          <article class="credential-card reveal">
+            <div class="credential-header">
+              <div class="credential-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="7"></circle>
+                  <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+              </div>
+              <div>
+                <span class="credential-year">Specialized Training</span>
+                <h3 class="credential-title">Core Technical Competencies &amp; Workshops</h3>
+              </div>
+            </div>
+            <p class="credential-body">
+              Hands-on technical workshops focused on industry-standard process flowsheet simulation, instrumentation diagramming, and quantitative plant modeling.
+            </p>
+            <div class="credential-tags">
+              <span class="credential-tag">Process Simulation &amp; P&amp;ID Drafting</span>
+              <span class="credential-tag">Industrial Excel Modeling for Chemical Engineers</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CONTACT SECTION
+         ====================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Get In Touch</span>
+          <h2 class="section-title">Connect &amp; Collaborate</h2>
+          <p class="section-subtitle">Open to graduate chemical engineering roles, process design internships, and industrial optimization opportunities.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Direct Contact Card -->
+          <div class="contact-info-card reveal">
+            <h3 class="contact-info-title">Direct Contact Channels</h3>
+            <p class="contact-info-subtitle">
+              Reach out directly via email or connect on LinkedIn to discuss process engineering projects, simulations, or career opportunities.
+            </p>
+
+            <div class="contact-method">
+              <div class="contact-method-label">Email Address</div>
+              <div class="email-row">
+                <a href="mailto:shivnathrajnar@gmail.com" class="email-link" id="email-text">shivnathrajnar@gmail.com</a>
+                <button type="button" class="copy-btn" id="copy-email-btn" aria-label="Copy email address to clipboard">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span id="copy-btn-label">Copy Email</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Note: Replace https://www.linkedin.com below with your exact LinkedIn profile URL (e.g., https://www.linkedin.com/in/your-profile) -->
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+              </svg>
+              <span>Connect on LinkedIn</span>
+            </a>
+          </div>
+
+          <!-- Quick Message Form -->
+          <div class="contact-form-card reveal">
+            <h3 class="form-title">Send a Quick Message</h3>
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="sender-name" class="form-label">Your Name</label>
+                <input type="text" id="sender-name" name="name" class="form-control" required autocomplete="name" />
+              </div>
+
+              <div class="form-group">
+                <label for="sender-email" class="form-label">Your Email</label>
+                <input type="email" id="sender-email" name="email" class="form-control" required autocomplete="email" />
+              </div>
+
+              <div class="form-group">
+                <label for="sender-message" class="form-label">Message</label>
+                <textarea id="sender-message" name="message" class="form-control" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Shivnath Sambhaji Rajnar. Engineered with precision.</p>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       INTERACTIVE RESUME SUMMARY & PRINT-TO-PDF MODAL
+       ======================================================================== -->
+  <div class="modal-backdrop" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
+    <div class="modal-dialog">
+      <div class="modal-toolbar">
+        <span class="modal-toolbar-title" id="resume-modal-title">Resume Summary &mdash; Shivnath Sambhaji Rajnar</span>
+        <div class="modal-toolbar-actions">
+          <button type="button" class="btn btn-teal" id="print-resume-btn" style="padding: 9px 16px; font-size: 0.875rem;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            <span>Print / Save as PDF</span>
+          </button>
+          <button type="button" class="modal-close-btn" id="close-resume-btn" aria-label="Close resume modal">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="resume-sheet" id="resume-printable">
+          <div class="resume-header">
+            <h2 class="resume-name">Shivnath Sambhaji Rajnar</h2>
+            <div class="resume-tagline">Chemical Engineer | Process Design Enthusiast</div>
+            <div class="resume-contact-line">
+              <span>Email: shivnathrajnar@gmail.com</span>
+              <span>B.E. / B.Tech Chemical Engineering &bull; Class of 2026</span>
+            </div>
+          </div>
+
+          <div class="resume-section">
+            <h3 class="resume-section-title">Professional Profile</h3>
+            <p>
+              I am a dedicated Chemical Engineering graduate (Class of 2026) with a strong passion for process design, sustainable energy solutions, and industrial plant optimization. My expertise lies in designing efficient separation systems and utilizing data analysis tools to maximize production yields. I am eager to apply fundamental chemical engineering principles and modern simulation tools to solve real-world industrial challenges.
+            </p>
+          </div>
+
+          <div class="resume-section">
+            <h3 class="resume-section-title">Education &amp; Credentials</h3>
+            <div class="resume-item">
+              <div class="resume-item-title">Bachelor of Chemical Engineering</div>
+              <div class="resume-item-meta">Graduating Year: 2026</div>
+              <p>Focus: Process Design, Mass Transfer, Chemical Reaction Engineering, and Plant Safety.</p>
+            </div>
+            <div class="resume-item">
+              <div class="resume-item-title">Core Technical Competencies &amp; Workshops</div>
+              <p>Process Simulation &amp; P&amp;ID Drafting; Industrial Excel Modeling for Chemical Engineers.</p>
+            </div>
+          </div>
+
+          <div class="resume-section">
+            <h3 class="resume-section-title">Technical Skills</h3>
+            <ul class="resume-list">
+              <li>Aspen Plus &amp; Aspen HYSYS</li>
+              <li>Process Flow Diagram (PFD) Development</li>
+              <li>AutoCAD (2D/3D) &amp; P&amp;ID Diagrams</li>
+              <li>Equipment Sizing (Absorption Towers)</li>
+              <li>MATLAB</li>
+              <li>Microsoft Excel (Advanced Modeling &amp; Yield Balance)</li>
+              <li>Mass &amp; Energy Balance Calculations</li>
+            </ul>
+          </div>
+
+          <div class="resume-section" style="margin-bottom: 0;">
+            <h3 class="resume-section-title">Key Engineering Projects</h3>
+            <div class="resume-item">
+              <div class="resume-item-title">Carbon Capture Absorption Tower Design</div>
+              <div class="resume-item-meta">Process Design Principles | Chemical Engineering Thermodynamics | Mass Transfer Calculations | AutoCAD / P&amp;ID</div>
+              <p>
+                Engineered the conceptual and detailed process design of an industrial absorption tower aimed at capturing CO<sub>2</sub> emissions from flue gas streams. Performed rigorous mass transfer, column sizing, packing selection, and gas-liquid equilibrium calculations to optimize capture efficiency and minimize energy penalties.
+              </p>
+            </div>
+            <div class="resume-item" style="margin-bottom: 0;">
+              <div class="resume-item-title">Industrial Production Yield Balance &amp; Optimization</div>
+              <div class="resume-item-meta">Microsoft Excel | Mass &amp; Energy Balance | Process Data Analysis</div>
+              <p>
+                Developed a comprehensive, automated Excel-based material and yield balance model to track raw material conversion, by-product formation, and process losses across unit operations. Identified key bottlenecks and proposed mass-balance adjustments to improve overall plant production yield and operational efficiency.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       TOAST NOTIFICATION
+       ======================================================================== -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <svg class="toast-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <span id="toast-message">Notification</span>
+  </div>
+
+  <!-- ========================================================================
+       VANILLA JAVASCRIPT
+       ======================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* --------------------------------------------------------------------
+         1. STICKY NAVBAR & MOBILE MENU
+         -------------------------------------------------------------------- */
+      const navbar = document.getElementById('navbar');
+      const navToggle = document.getElementById('nav-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+      const navLinks = document.querySelectorAll('.nav-link');
+      const sections = document.querySelectorAll('main section[id]');
+
+      function handleScroll() {
+        if (window.scrollY > 16) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+
+        // Highlight active navigation link based on scroll position
+        let currentId = '';
+        const scrollPosition = window.scrollY + 120;
+        sections.forEach((section) => {
+          const top = section.offsetTop;
+          const height = section.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            currentId = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove('active');
+          if (currentId && link.getAttribute('href') === '#' + currentId) {
+            link.classList.add('active');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      handleScroll();
+
+      function toggleMobileMenu(forceClose) {
+        const isOpen = forceClose ? false : !mobileMenu.classList.contains('open');
+        mobileMenu.classList.toggle('open', isOpen);
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+      }
+
+      navToggle.addEventListener('click', () => toggleMobileMenu(false));
+      mobileLinks.forEach((link) => {
+        link.addEventListener('click', () => toggleMobileMenu(true));
+      });
+
+      /* --------------------------------------------------------------------
+         2. INTERSECTION OBSERVER SCROLL REVEAL
+         -------------------------------------------------------------------- */
+      const revealElements = document.querySelectorAll('.reveal');
+
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.12,
+            rootMargin: '0px 0px -40px 0px'
+          }
+        );
+
+        revealElements.forEach((el) => revealObserver.observe(el));
+      } else {
+        revealElements.forEach((el) => el.classList.add('is-visible'));
+      }
+
+      /* --------------------------------------------------------------------
+         3. TOAST NOTIFICATION SYSTEM
+         -------------------------------------------------------------------- */
+      const toast = document.getElementById('toast');
+      const toastMessage = document.getElementById('toast-message');
+      let toastTimer = null;
+
+      function showToast(message) {
+        toastMessage.textContent = message;
+        toast.classList.add('show');
+        if (toastTimer) {
+          clearTimeout(toastTimer);
+        }
+        toastTimer = setTimeout(() => {
+          toast.classList.remove('show');
+        }, 3600);
+      }
+
+      /* --------------------------------------------------------------------
+         4. RESUME MODAL & PRINT-TO-PDF
+         -------------------------------------------------------------------- */
+      const resumeModal = document.getElementById('resume-modal');
+      const openResumeBtn = document.getElementById('open-resume-btn');
+      const closeResumeBtn = document.getElementById('close-resume-btn');
+      const printResumeBtn = document.getElementById('print-resume-btn');
+
+      function openResumeModal() {
+        resumeModal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        closeResumeBtn.focus();
+      }
+
+      function closeResumeModal() {
+        resumeModal.classList.remove('open');
+        document.body.style.overflow = '';
+        openResumeBtn.focus();
+      }
+
+      openResumeBtn.addEventListener('click', openResumeModal);
+      closeResumeBtn.addEventListener('click', closeResumeModal);
+
+      resumeModal.addEventListener('click', (event) => {
+        if (event.target === resumeModal) {
+          closeResumeModal();
+        }
+      });
+
+      printResumeBtn.addEventListener('click', () => {
+        window.print();
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          if (resumeModal.classList.contains('open')) {
+            closeResumeModal();
+          }
+          if (mobileMenu.classList.contains('open')) {
+            toggleMobileMenu(true);
+          }
+        }
+      });
+
+      /* --------------------------------------------------------------------
+         5. COPY EMAIL TO CLIPBOARD
+         -------------------------------------------------------------------- */
+      const copyEmailBtn = document.getElementById('copy-email-btn');
+      const copyBtnLabel = document.getElementById('copy-btn-label');
+      const emailAddress = 'shivnathrajnar@gmail.com';
+
+      copyEmailBtn.addEventListener('click', async () => {
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(emailAddress);
+          } else {
+            const tempInput = document.createElement('input');
+            tempInput.value = emailAddress;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+          }
+          copyBtnLabel.textContent = 'Copied!';
+          showToast('Email copied to clipboard: ' + emailAddress);
+          setTimeout(() => {
+            copyBtnLabel.textContent = 'Copy Email';
+          }, 2200);
+        } catch (err) {
+          showToast('Please copy manually: ' + emailAddress);
+        }
+      });
+
+      /* --------------------------------------------------------------------
+         6. QUICK-MESSAGE FORM HANDLER
+         -------------------------------------------------------------------- */
+      const contactForm = document.getElementById('contact-form');
+
+      contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const nameInput = document.getElementById('sender-name');
+        const emailInput = document.getElementById('sender-email');
+        const messageInput = document.getElementById('sender-message');
+
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const message = messageInput.value.trim();
+
+        if (!name || !email || !message) {
+          showToast('Please complete all required fields before sending.');
+          return;
+        }
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+          showToast('Please enter a valid email address.');
+          emailInput.focus();
+          return;
+        }
+
+        const subject = encodeURIComponent('Portfolio Inquiry from ' + name);
+        const body = encodeURIComponent(
+          'Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message
+        );
+
+        showToast('Thank you, ' + name + '! Opening your email client to send.');
+        window.location.href = 'mailto:' + emailAddress + '?subject=' + subject + '&body=' + body;
+        contactForm.reset();
+      });
+    })();
+  </script>
+</body>
+</html>
